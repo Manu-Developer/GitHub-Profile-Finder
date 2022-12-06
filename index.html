@@ -14,8 +14,8 @@
 		<!-- Css Styles -->
 
 		<!-- Scripts -->
-		<script src="https://kit.fontawesome.com/a9bc1a82bd.js" crossorigin="anonymous"></script>
 		<script src="./app.js" defer></script>
+		<script src="https://kit.fontawesome.com/a9bc1a82bd.js" crossorigin="anonymous"></script>
 		<!-- Scripts -->
 	</head>
 	<body>
@@ -30,7 +30,7 @@
 						</svg>
 						<h1 class="header__title">GitHub User Search</h1>
 					</div>
-					<p class="header__description">Browse users and their profiles via <a href="https://developer.github.com/v3/" class="api__link">the GitHub API</a></p>
+					<p class="header__description">Browse users and their profiles via <a href="https://developer.github.com/v3/" class="api__link" target="_blank">the GitHub API</a></p>
 				</div>
 				<nav class="nav">
 					<input type="text" class="search__input" placeholder="Search for a user, e.g. simonsmith" />
@@ -43,13 +43,14 @@
 		<!-- Header Section -->
 
 		<!-- Main Section -->
-		<main>
+		<main class="main__section">
+			<p class="error">We could not find the entered user, try again...</p>
 			<section class="user">
 				<div class="user__image">
 					<img src="" class="github__image" />
 				</div>
 				<div class="user__info">
-					<div class="userNames">
+					<div class="user__names">
 						<p class="user__name"></p>
 						<a href="#" class="user__name2" target="_blank"></a>
 					</div>
@@ -74,5 +75,12 @@
 			</section>
 		</main>
 		<!-- Main Section -->
+
+		<!-- Repositories & Followers Section -->
+		<section class="user__secondaryInfo">
+			<div class="user__repositories"></div>
+			<div class="user__followers"></div>
+		</section>
+		<!-- Repositories & Followers Section -->
 	</body>
 </html>

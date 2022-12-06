@@ -16,8 +16,9 @@ img {
 
 p,
 a {
-	font-size: 1.3rem;
-	line-height: 1.3;
+	color: #000;
+	font-size: 1.5rem;
+	line-height: 1.5;
 }
 
 .header {
@@ -27,7 +28,7 @@ a {
 }
 
 .header__container {
-	max-width: 90rem;
+	max-width: 110rem;
 	margin: 0 auto;
 	padding: 1rem 2rem;
 	display: flex;
@@ -40,6 +41,10 @@ a {
 	align-items: center;
 	gap: 1rem;
 	margin-bottom: 1rem;
+}
+
+.header__title {
+	font-size: 2.5rem;
 }
 
 .api__link {
@@ -55,7 +60,8 @@ a {
 
 .search__input {
 	width: 100%;
-	padding: 0.5rem 1rem;
+	padding: 1rem 1.5rem;
+	font-size: 1.5rem;
 	border: 1px solid #bbb;
 	border-radius: 6px 0 0 6px;
 }
@@ -73,9 +79,8 @@ a {
 }
 
 /* User Data */
-
 main {
-	max-width: 90rem;
+	max-width: 110rem;
 	margin: 0 auto;
 	padding: 2rem;
 }
@@ -86,7 +91,7 @@ main {
 }
 
 .user__image {
-	flex: 0 0 200px;
+	flex: 0 0 300px;
 }
 
 .user__image img {
@@ -100,7 +105,7 @@ main {
 	gap: 1rem;
 }
 
-.userNames {
+.user__names {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
@@ -148,10 +153,71 @@ main {
 .firstStatNumber,
 .secondStatNumber,
 .thirdStatNumber {
-	font-size: 2rem;
+	font-size: 2.5rem;
 	font-weight: 600;
 }
 
+.error {
+	display: none;
+}
+
+.user__secondaryInfo {
+	max-width: 110rem;
+	margin: 0 auto;
+	padding: 2rem;
+	display: flex;
+	gap: 2rem;
+}
+
+.user__followers,
+.user__repositories {
+	flex: 1;
+}
+
+.repository {
+	margin-bottom: 2rem;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 1rem;
+}
+
+.repository__name {
+	color: #238636;
+	text-decoration: none;
+}
+
+.repository__languages {
+	margin-top: 2rem;
+}
+
+.user__followers__title,
+.user__repositories__title {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+.follower {
+	display: flex;
+	gap: 2rem;
+	padding-bottom: 1rem;
+	margin-bottom: 3rem;
+	text-decoration: none;
+	border-bottom: 1px solid #ddd;
+}
+
+.follower:hover .follower__username {
+	color: #238636;
+}
+
+.follower__img {
+	flex: 0 0 100px;
+}
+
+.follower__img img {
+	border-radius: 8px;
+}
+/* User Data */
+
+/* BreakPoints */
 @media screen and (max-width: 768px) {
 	.header__container {
 		flex-direction: column;
@@ -164,8 +230,13 @@ main {
 	}
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 650px) {
 	.user {
 		flex-direction: column;
 	}
+
+	.user__secondaryInfo {
+		flex-direction: column;
+	}
 }
+/* BreakPoints */
